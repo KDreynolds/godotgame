@@ -67,7 +67,7 @@ func jump_to_ceiling():
 
 		
 func update_score_label():
-	score_label.text = "Score: " + str(score)
+	score_label.text = "   Score: " + str(int(round(score)))
 	
 func update_score(delta):
 	score += score_inc * delta
@@ -86,6 +86,7 @@ func trigger_game_over():
 	if not is_game_over:
 		is_game_over = true
 		get_node("/root/Game/UI/GameOverScreen").show_final_score(score)
+		score_label.visible = false
 		get_tree().paused = true
 		
 func _on_empty_block_collision(body):
