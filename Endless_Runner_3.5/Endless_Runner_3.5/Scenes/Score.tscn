@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://dynamicfont.tres" type="DynamicFont" id=1]
+
+[node name="ScoreLabel" type="Label"]
+anchor_bottom = 0.004
+margin_bottom = 57.84
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = ExtResource( 1 )
+align = 1
+__meta__ = {
+"_editor_description_": ""
+}
