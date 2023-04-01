@@ -1,0 +1,6 @@
+[gd_scene format=2]
+
+[node name="EmptyBlock" type="Area2D" groups=["EmptyBlock"]]
+z_index = 1
+
+[node name="Sprite" type="Sprite" parent="."]

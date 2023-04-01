@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/start_screen.gd" type="Script" id=1]
+[ext_resource path="res://dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Assets/T_PurpleBackground_Version1_Layer1.png" type="Texture" id=5]
+[ext_resource path="res://Assets/T_PurpleBackground_Version1_Layer4.png" type="Texture" id=6]
+[ext_resource path="res://Assets/T_PurpleBackground_Version1_Layer3.png" type="Texture" id=7]
+[ext_resource path="res://Assets/T_PurpleBackground_Version1_Layer2.png" type="Texture" id=8]
+
+[node name="StartScreen" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -960.0
+margin_bottom = -540.0
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="RichTextLabel" parent="."]
+margin_left = 23.0
+margin_top = 72.0
+margin_right = 461.0
+margin_bottom = 177.0
+rect_scale = Vector2( 2, 2 )
+bbcode_enabled = true
+bbcode_text = "[font=res://dynamicfont.tres]Working Title[/font]
+
+"
+text = "Working Title
+
+"
+
+[node name="StartButton" type="Button" parent="."]
+margin_left = 34.0
+margin_top = 186.0
+margin_right = 231.0
+margin_bottom = 312.0
+custom_fonts/font = ExtResource( 2 )
+text = "Start"
+flat = true
+align = 0
+icon_align = 1
+
+[node name="QuitButton" type="Button" parent="."]
+margin_left = 25.0
+margin_top = 313.0
+margin_right = 181.0
+margin_bottom = 471.0
+custom_fonts/font = ExtResource( 2 )
+text = "QUIT"
+flat = true
+
+[node name="CreditsButton" type="Button" parent="."]
+margin_left = -40.0
+margin_top = 257.0
+margin_right = 335.0
+margin_bottom = 380.0
+custom_fonts/font = ExtResource( 2 )
+text = "CREDITS"
+flat = true
+
+[node name="Background" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2( 1, 0 )
+
+[node name="Layer1" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.5, 0 )
+motion_mirroring = Vector2( 4096, 2048 )
+
+[node name="Image1" type="Sprite" parent="Background/Layer1"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 5 )
+
+[node name="Layer2" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.7, 0 )
+motion_mirroring = Vector2( 4096, 2048 )
+
+[node name="Image2" type="Sprite" parent="Background/Layer2"]
+texture = ExtResource( 8 )
+
+[node name="Layer3" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 1, 0 )
+motion_mirroring = Vector2( 4096, 2048 )
+
+[node name="Image3" type="Sprite" parent="Background/Layer3"]
+texture = ExtResource( 7 )
+
+[node name="Layer4" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.3, 0 )
+motion_mirroring = Vector2( 4096, 2048 )
+
+[node name="Image4" type="Sprite" parent="Background/Layer4"]
+texture = ExtResource( 6 )

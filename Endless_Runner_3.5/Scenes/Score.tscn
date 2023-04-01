@@ -1,0 +1,10 @@
+[gd_scene format=2]
+
+[node name="ScoreLabel" type="Label"]
+anchor_right = 0.004
+anchor_bottom = 0.004
+margin_right = 39.16
+margin_bottom = 22.84
+__meta__ = {
+"_editor_description_": ""
+}
