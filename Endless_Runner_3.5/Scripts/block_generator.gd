@@ -21,7 +21,7 @@ func _process(_delta):
 func _ready():
 	player = get_node(player_path)
 	floor_y_offset = screen_size.y * 0.88
-	ceiling_y_offset = screen_size.y * 0.07
+	ceiling_y_offset = screen_size.y * 0.09
 	generate_blocks()
 
 var generated_blocks = {}
