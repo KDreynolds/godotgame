@@ -1,11 +1,14 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/start_screen.gd" type="Script" id=1]
 [ext_resource path="res://dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scripts/hover.gd" type="Script" id=3]
 [ext_resource path="res://Assets/T_PurpleBackground_Version1_Layer1.png" type="Texture" id=5]
 [ext_resource path="res://Assets/T_PurpleBackground_Version1_Layer4.png" type="Texture" id=6]
 [ext_resource path="res://Assets/T_PurpleBackground_Version1_Layer3.png" type="Texture" id=7]
 [ext_resource path="res://Assets/T_PurpleBackground_Version1_Layer2.png" type="Texture" id=8]
+
+[sub_resource type="StyleBoxFlat" id=1]
 
 [node name="StartScreen" type="ColorRect"]
 anchor_right = 1.0
@@ -14,7 +17,7 @@ margin_right = -960.0
 margin_bottom = -540.0
 script = ExtResource( 1 )
 
-[node name="TextureRect" type="RichTextLabel" parent="."]
+[node name="GameTitle" type="RichTextLabel" parent="."]
 margin_left = 23.0
 margin_top = 42.0
 margin_right = 490.0
@@ -24,25 +27,27 @@ bbcode_enabled = true
 bbcode_text = "[font=res://dynamicfont.tres]Working Title[/font]"
 text = "Working Title"
 
+[node name="StudioName" type="RichTextLabel" parent="."]
+margin_left = 434.0
+margin_top = 496.0
+margin_right = 809.0
+margin_bottom = 591.0
+rect_scale = Vector2( 0.3, 0.3 )
+bbcode_enabled = true
+bbcode_text = "[font=res://dynamicfont.tres]Altf4 games[/font]"
+text = "Altf4 games"
+
 [node name="StartButton" type="Button" parent="."]
 margin_left = 43.0
 margin_top = 205.0
 margin_right = 239.0
 margin_bottom = 271.0
 custom_fonts/font = ExtResource( 2 )
+custom_styles/hover = SubResource( 1 )
 text = "Start"
 flat = true
 align = 0
 icon_align = 1
-
-[node name="QuitButton" type="Button" parent="."]
-margin_left = 43.0
-margin_top = 348.0
-margin_right = 175.0
-margin_bottom = 414.0
-custom_fonts/font = ExtResource( 2 )
-text = "QUIT"
-flat = true
 
 [node name="CreditsButton" type="Button" parent="."]
 margin_left = 43.0
@@ -50,8 +55,29 @@ margin_top = 275.0
 margin_right = 265.0
 margin_bottom = 341.0
 custom_fonts/font = ExtResource( 2 )
-text = "CREDITS"
+custom_styles/hover = SubResource( 1 )
+text = "credits"
 flat = true
+align = 0
+icon_align = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="QuitButton" type="Button" parent="."]
+margin_left = 43.0
+margin_top = 345.0
+margin_right = 265.0
+margin_bottom = 341.0
+custom_fonts/font = ExtResource( 2 )
+custom_styles/hover = SubResource( 1 )
+text = "quit"
+flat = true
+align = 0
+icon_align = 1
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="Background" type="ParallaxBackground" parent="."]
 scroll_offset = Vector2( 1, 0 )
@@ -84,3 +110,41 @@ motion_mirroring = Vector2( 4096, 2048 )
 
 [node name="Image4" type="Sprite" parent="Background/Layer4"]
 texture = ExtResource( 6 )
+
+[node name="TitleBannerBackground" type="ColorRect" parent="."]
+show_behind_parent = true
+margin_left = -14.0
+margin_top = 49.0
+margin_right = 982.0
+margin_bottom = 164.0
+color = Color( 0.0901961, 0.0901961, 0.0901961, 0.784314 )
+
+[node name="CreditsHover" type="ColorRect" parent="."]
+show_behind_parent = true
+margin_left = -10.0
+margin_top = 280.0
+margin_right = 340.0
+margin_bottom = 340.0
+mouse_filter = 2
+color = Color( 0.113725, 0.113725, 0.113725, 0.784314 )
+script = ExtResource( 3 )
+
+[node name="QuitHover" type="ColorRect" parent="."]
+show_behind_parent = true
+margin_left = -10.0
+margin_top = 350.0
+margin_right = 340.0
+margin_bottom = 410.0
+mouse_filter = 2
+color = Color( 0.0901961, 0.0901961, 0.0901961, 0.784314 )
+script = ExtResource( 3 )
+
+[node name="StartHover" type="ColorRect" parent="."]
+show_behind_parent = true
+margin_left = -10.0
+margin_top = 210.0
+margin_right = 340.0
+margin_bottom = 270.0
+mouse_filter = 2
+color = Color( 0.113725, 0.113725, 0.113725, 0.784314 )
+script = ExtResource( 3 )

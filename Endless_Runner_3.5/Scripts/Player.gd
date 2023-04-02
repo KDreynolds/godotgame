@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 export var speed = 500
 export var jump_force = 500
+export var jump_threshold = 0
 var velocity = Vector2.ZERO
 var gravity = 20
 var on_ceiling = false
@@ -61,9 +62,10 @@ func jump_to_ceiling():
 		gravity = -20  # Reverse gravity
 		on_ceiling = true
 	elif on_ceiling and is_touching_ceiling:
-		velocity.y = jump_force
-		gravity = 20  # Restore gravity
-		on_ceiling = false
+		if global_position.y > jump_threshold:  # Check if the player is below the threshold
+			velocity.y = jump_force
+			gravity = 20  # Restore gravity
+			on_ceiling = false
 
 		
 func update_score_label():
