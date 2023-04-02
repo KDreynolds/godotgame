@@ -18,13 +18,16 @@ func show_final_score(score):
 
 func _on_retry_button_pressed():
 	hide()
+	SelectSFX.play()
 	get_tree().paused = false
 	get_node("/root/Game/Player").reset_speed()
 	get_node("/root/Game/UI/ScoreContainer/ScoreLabel").visible = true
 	
 func _on_main_menu_button_pressed():
+	SelectSFX.play()
 	get_tree().change_scene("res://Scenes/StartScreen.tscn")
 	get_tree().paused = false
 	
 func _on_quit_button_game_over_screen_pressed():
+	SelectSFX.play()
 	get_tree().quit()

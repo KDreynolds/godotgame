@@ -14,6 +14,12 @@ config/name="Endless_Runner"
 run/main_scene="res://Scenes/StartScreen.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+SelectSFX="*res://Scenes/Sound.tscn"
+JumpSFX="*res://Scenes/JumpSound.tscn"
+GameOverSFX="*res://Scenes/GameOverSound.tscn"
+
 [display]
 
 window/size/width=960

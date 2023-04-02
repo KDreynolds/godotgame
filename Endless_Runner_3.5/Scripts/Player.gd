@@ -57,6 +57,7 @@ func _process(delta):
 	update_score(delta)
 
 func jump_to_ceiling():
+	JumpSFX.play()
 	if not on_ceiling and is_on_floor():
 		velocity.y = -jump_force
 		gravity = -20  # Reverse gravity
@@ -86,6 +87,7 @@ func _ready():
 	
 func trigger_game_over():
 	if not is_game_over:
+		GameOverSFX.play()
 		is_game_over = true
 		get_node("/root/Game/UI/GameOverScreen").show_final_score(score)
 		score_label.visible = false

@@ -13,4 +13,5 @@ func _process(delta):
 	background.scroll_offset.x += speed * delta
 	
 func _on_back_button_pressed():
+	SelectSFX.play()
 	get_tree().change_scene("res://Scenes/StartScreen.tscn")
