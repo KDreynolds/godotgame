@@ -3,4 +3,5 @@
 [ext_resource path="res://Sounds/failed.mp3" type="AudioStream" id=1]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+pause_mode = 2
 stream = ExtResource( 1 )

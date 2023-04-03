@@ -51,14 +51,32 @@ bbcode_enabled = true
 bbcode_text = "[font=res://dynamicfont.tres] 
 Kyle reynolds
 
-Dan quinn
+Dos-88
 [/font]
 
 "
 text = " 
 Kyle reynolds
 
-Dan quinn
+Dos-88
+
+
+"
+
+[node name="YT" type="RichTextLabel" parent="."]
+margin_left = 52.0
+margin_top = 350.0
+margin_right = 1830.0
+margin_bottom = 596.0
+rect_scale = Vector2( 0.5, 0.5 )
+bbcode_enabled = true
+bbcode_text = "[font=res://dynamicfont.tres] 
+find them on youtube @doseightyeight please support them with a follow
+[/font]
+
+"
+text = " 
+find them on youtube @doseightyeight please support them with a follow
 
 
 "

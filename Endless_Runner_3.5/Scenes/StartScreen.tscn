@@ -25,8 +25,8 @@ margin_right = 490.0
 margin_bottom = 108.0
 rect_scale = Vector2( 2, 2 )
 bbcode_enabled = true
-bbcode_text = "[font=res://dynamicfont.tres]Working Title[/font]"
-text = "Working Title"
+bbcode_text = "[font=res://dynamicfont.tres]grav cube runner[/font]"
+text = "grav cube runner"
 
 [node name="StudioName" type="RichTextLabel" parent="."]
 margin_left = 434.0
@@ -154,3 +154,7 @@ script = ExtResource( 3 )
 stream = ExtResource( 4 )
 volume_db = 3.0
 autoplay = true
+
+[node name="SpeedTimer" type="Timer" parent="."]
+process_mode = 0
+autostart = true

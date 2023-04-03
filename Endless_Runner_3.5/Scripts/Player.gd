@@ -11,9 +11,10 @@ var score_inc = 100
 var score_label
 var is_game_over = false
 var is_touching_ceiling = false
-export var speed_increase = 20
+export var speed_increase = 50
 onready var original_speed = speed
 onready var parallax_background = get_node("/root/Game/Background")
+
 
 
 
@@ -87,6 +88,7 @@ func _ready():
 	
 func trigger_game_over():
 	if not is_game_over:
+		GameOverSFX.play()
 		is_game_over = true
 		get_node("/root/Game/UI/GameOverScreen").show_final_score(score)
 		score_label.visible = false
