@@ -87,7 +87,6 @@ func _ready():
 	
 func trigger_game_over():
 	if not is_game_over:
-		GameOverSFX.play()
 		is_game_over = true
 		get_node("/root/Game/UI/GameOverScreen").show_final_score(score)
 		score_label.visible = false

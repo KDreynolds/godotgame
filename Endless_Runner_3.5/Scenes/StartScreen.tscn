@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/start_screen.gd" type="Script" id=1]
 [ext_resource path="res://dynamicfont.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Scripts/hover.gd" type="Script" id=3]
+[ext_resource path="res://Sounds/Race to Mars.mp3" type="AudioStream" id=4]
 [ext_resource path="res://Assets/T_PurpleBackground_Version1_Layer1.png" type="Texture" id=5]
 [ext_resource path="res://Assets/T_PurpleBackground_Version1_Layer4.png" type="Texture" id=6]
 [ext_resource path="res://Assets/T_PurpleBackground_Version1_Layer3.png" type="Texture" id=7]
@@ -148,3 +149,8 @@ margin_bottom = 270.0
 mouse_filter = 2
 color = Color( 0.113725, 0.113725, 0.113725, 0.784314 )
 script = ExtResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = 3.0
+autoplay = true
